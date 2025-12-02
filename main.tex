@@ -1,9 +1,5 @@
 %&../.preamble
-\endofdump
-
-\usetikzlibrary{external}
-\tikzset{external/system call={pdflatex --shell-escape --fmt=../.preamble --halt-on-error -jobname "\image" "\endofdump\texsource"}}
-\tikzexternalize[prefix=tikz/]
+\externalize{../.preamble}
 
 \title{Logica computazionale}
 \author{Marini Mattia}
@@ -342,7 +338,7 @@ In quest'ultimo caso, se prendo $ M \left\{\text{}\right\} $
 		\node [anchor=south]at (0,1) {Africani};
 		\node [anchor=south]at (0,3) {Neri};
 		\draw [-latex, bend left](-3, 0)node[fill = white]{Barack Obama}to(0,2);
-    \node [fill = white](r)at (3,0) {Nelson Mandela};
+		\node [fill = white](r)at (3,0) {Nelson Mandela};
 		\draw [-latex](r)--(0,0);
 	\end{tikzpicture}
 \end{center}
